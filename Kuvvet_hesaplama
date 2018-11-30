@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Nov 30 16:32:25 2018
+
+@author: KEMAL
+"""
+## Birler basamağı 5 olan herhangi bir sayının kuvvetini
+## işlemcinizi yormadan kolaylıkla hesaplayan algoritma
+
+sayi = input("Kuvvetini almak istediğiniz sayıyı giriniz :")
+ilk_sayi=""
+for s in sayi:
+    ilk_sayi += s 
+    if(len(ilk_sayi)==(len(sayi)-1)): ## burada for döngüsünün ne zaman kırılacağını şarta bağlıyoruz
+        break;
+        
+hesap = int(ilk_sayi)*(int(ilk_sayi)+1) #sonu 5 ile biten sayıların karesini alma formülünü koda çevirdik
+kuvvet = str(hesap) + "25"              #hesaplanan değer sonuna 25 sayısını ekliyoruz.
+kuvvet = int(kuvvet)
+mesaj = "{} sayısının kuvveti {} dir"
+print(mesaj.format(sayi,kuvvet))
+print(type(kuvvet))
+input()
